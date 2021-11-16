@@ -10,7 +10,7 @@ const validateInput = (req, res, next) => {
     }
 }
 
-const userEmailExists = async (req, res, next) => {
+const userEmailExist = async (req, res, next) => {
     const allUsers = await Users.getAllUsers()
     const userExist = allUsers.find((u) => u.user_email === req.body.user_email)
     if(userExist) {
@@ -47,7 +47,7 @@ async function checkItemId(req, res, next) {
 
 module.exports = {
     validateInput,
-    userEmailExists,
+    userEmailExist,
     checkItemId,
     checkUserId,
 }
