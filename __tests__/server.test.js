@@ -1,6 +1,6 @@
 const request = require('supertest')
 const server = require('../api/server')
-const db = require('../api/data/db-config')
+const db = require('../data/db-config')
 
 beforeAll(async () => {
   await db.migrate.rollback()

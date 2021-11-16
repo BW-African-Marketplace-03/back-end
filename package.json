@@ -11,7 +11,7 @@
     "rollbackh": "heroku run knex migrate:rollback -a africanmarketplace03",
     "databaseh": "heroku pg:psql -a africanmarketplace03",
     "seedh": "heroku run knex seed:run -a africanmarketplace03",
-    "test": "cross-env NODE_ENV=testing jest --verbose --runInBand",
+    "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand",
     "deploy": "git push heroku main"
   },
   "engines": {
