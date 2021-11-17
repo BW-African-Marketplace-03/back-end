@@ -39,7 +39,7 @@ function update(id, changes) {
 
 function findItemByListingUserId(user_id) {
     return db('items')
-        .leftJoin('users', 'items.user', 'users.user_id')
+        .leftJoin('users', 'items.user_id', 'users.user_id')
         .select(
             'items.item_name',
             'items.location',
